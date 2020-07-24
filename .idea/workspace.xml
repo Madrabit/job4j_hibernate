@@ -1,21 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="fa3d0817-3581-49c9-9d44-f5b61a80c63b" name="Default Changelist" comment="first commit">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/job4j_hibernate.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/job4j/hibernate/model/Car.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/job4j/hibernate/model/Driver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/job4j/hibernate/model/Engine.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/job4j/hibernate/store/CarStore.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/job4j/hibernate/store/HbmRun.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/job4j/hibernate/store/Store.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/job4j/hibernate/util/HibernateUtil.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/log4j2.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-    </list>
+    <list default="true" id="fa3d0817-3581-49c9-9d44-f5b61a80c63b" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -94,7 +80,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1595057532355</updated>
-      <workItem from="1595057535690" duration="19440000" />
+      <workItem from="1595057535690" duration="20292000" />
     </task>
     <task id="LOCAL-00001" summary="first commit">
       <created>1595057660378</created>
@@ -103,7 +89,14 @@
       <option name="project" value="LOCAL" />
       <updated>1595057660378</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Модели и связи. Машины и владельцы [#4744]">
+      <created>1595511721157</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1595511721157</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -111,7 +104,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="first commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="first commit" />
+    <MESSAGE value="Модели и связи. Машины и владельцы [#4744]" />
+    <option name="LAST_COMMIT_MESSAGE" value="Модели и связи. Машины и владельцы [#4744]" />
   </component>
   <component name="WindowStateProjectService">
     <state x="829" y="404" width="251" height="263" key="#Notifications" timestamp="1595508225328">
@@ -138,38 +132,38 @@
       <screen x="0" y="27" width="1920" height="1020" />
     </state>
     <state x="696" y="377" width="518" height="317" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.27.1920.1020@0.27.1920.1020" timestamp="1595509624311" />
-    <state x="499" y="93" width="912" height="886" key="CommitChangelistDialog2" timestamp="1595057754427">
+    <state x="499" y="93" width="912" height="886" key="CommitChangelistDialog2" timestamp="1595511721046">
       <screen x="0" y="27" width="1920" height="1020" />
     </state>
-    <state x="499" y="93" width="912" height="886" key="CommitChangelistDialog2/0.27.1920.1020@0.27.1920.1020" timestamp="1595057754427" />
+    <state x="499" y="93" width="912" height="886" key="CommitChangelistDialog2/0.27.1920.1020@0.27.1920.1020" timestamp="1595511721046" />
     <state x="743" y="294" width="424" height="484" key="FileChooserDialogImpl" timestamp="1595311823863">
       <screen x="0" y="27" width="1920" height="1020" />
     </state>
     <state x="743" y="294" width="424" height="484" key="FileChooserDialogImpl/0.27.1920.1020@0.27.1920.1020" timestamp="1595311823863" />
-    <state width="1920" height="275" key="GridCell.Tab.0.bottom" timestamp="1595508807198">
+    <state width="1920" height="275" key="GridCell.Tab.0.bottom" timestamp="1595511624729">
       <screen x="0" y="27" width="1920" height="1020" />
     </state>
-    <state width="1920" height="275" key="GridCell.Tab.0.bottom/0.27.1920.1020@0.27.1920.1020" timestamp="1595508807198" />
-    <state width="1920" height="275" key="GridCell.Tab.0.center" timestamp="1595508807197">
+    <state width="1920" height="275" key="GridCell.Tab.0.bottom/0.27.1920.1020@0.27.1920.1020" timestamp="1595511624729" />
+    <state width="1920" height="275" key="GridCell.Tab.0.center" timestamp="1595511624729">
       <screen x="0" y="27" width="1920" height="1020" />
     </state>
-    <state width="1920" height="275" key="GridCell.Tab.0.center/0.27.1920.1020@0.27.1920.1020" timestamp="1595508807197" />
-    <state width="1920" height="275" key="GridCell.Tab.0.left" timestamp="1595508807197">
+    <state width="1920" height="275" key="GridCell.Tab.0.center/0.27.1920.1020@0.27.1920.1020" timestamp="1595511624729" />
+    <state width="1920" height="275" key="GridCell.Tab.0.left" timestamp="1595511624729">
       <screen x="0" y="27" width="1920" height="1020" />
     </state>
-    <state width="1920" height="275" key="GridCell.Tab.0.left/0.27.1920.1020@0.27.1920.1020" timestamp="1595508807197" />
-    <state width="1920" height="275" key="GridCell.Tab.0.right" timestamp="1595508807198">
+    <state width="1920" height="275" key="GridCell.Tab.0.left/0.27.1920.1020@0.27.1920.1020" timestamp="1595511624729" />
+    <state width="1920" height="275" key="GridCell.Tab.0.right" timestamp="1595511624729">
       <screen x="0" y="27" width="1920" height="1020" />
     </state>
-    <state width="1920" height="275" key="GridCell.Tab.0.right/0.27.1920.1020@0.27.1920.1020" timestamp="1595508807198" />
+    <state width="1920" height="275" key="GridCell.Tab.0.right/0.27.1920.1020@0.27.1920.1020" timestamp="1595511624729" />
     <state x="443" y="113" width="1024" height="845" key="SettingsEditor" timestamp="1595347355704">
       <screen x="0" y="27" width="1920" height="1020" />
     </state>
     <state x="443" y="113" width="1024" height="845" key="SettingsEditor/0.27.1920.1020@0.27.1920.1020" timestamp="1595347355704" />
-    <state x="555" y="272" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1595057932500">
+    <state x="555" y="272" width="800" height="528" key="Vcs.Push.Dialog.v2" timestamp="1595511724000">
       <screen x="0" y="27" width="1920" height="1020" />
     </state>
-    <state x="555" y="272" width="800" height="528" key="Vcs.Push.Dialog.v2/0.27.1920.1020@0.27.1920.1020" timestamp="1595057932500" />
+    <state x="555" y="272" width="800" height="528" key="Vcs.Push.Dialog.v2/0.27.1920.1020@0.27.1920.1020" timestamp="1595511724000" />
     <state x="561" y="149" width="788" height="773" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1595509192676">
       <screen x="0" y="27" width="1920" height="1020" />
     </state>
