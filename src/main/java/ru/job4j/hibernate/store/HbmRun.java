@@ -3,6 +3,7 @@ package ru.job4j.hibernate.store;
 import ru.job4j.hibernate.model.Car;
 import ru.job4j.hibernate.model.Driver;
 import ru.job4j.hibernate.model.Engine;
+import ru.job4j.hibernate.store.dao.impl.CarStore;
 
 import java.util.List;
 

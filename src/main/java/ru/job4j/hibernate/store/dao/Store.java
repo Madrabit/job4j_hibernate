@@ -1,4 +1,4 @@
-package ru.job4j.hibernate.store;
+package ru.job4j.hibernate.store.dao;
 
 import java.util.List;
 

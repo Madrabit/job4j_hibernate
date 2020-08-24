@@ -1,4 +1,4 @@
-package ru.job4j.hibernate.store;
+package ru.job4j.hibernate.store.dao.impl;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -7,6 +7,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import ru.job4j.hibernate.model.Driver;
 import ru.job4j.hibernate.model.Engine;
+import ru.job4j.hibernate.store.dao.Store;
 import ru.job4j.hibernate.util.HibernateUtil;
 
 import java.util.List;

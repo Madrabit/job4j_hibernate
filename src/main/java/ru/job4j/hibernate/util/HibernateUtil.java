@@ -4,6 +4,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.cfg.Environment;
+import ru.job4j.hibernate.model.Candidate;
 import ru.job4j.hibernate.model.Car;
 import ru.job4j.hibernate.model.Driver;
 import ru.job4j.hibernate.model.Engine;
@@ -35,6 +36,7 @@ public class HibernateUtil {
                 configuration.addAnnotatedClass(Car.class);
                 configuration.addAnnotatedClass(Driver.class);
                 configuration.addAnnotatedClass(Engine.class);
+                configuration.addAnnotatedClass(Candidate.class);
                 StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder()
                         .applySettings(configuration.getProperties());
                 sessionFactory = configuration.buildSessionFactory(builder.build());
