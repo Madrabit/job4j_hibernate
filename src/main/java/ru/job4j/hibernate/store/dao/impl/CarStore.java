@@ -5,8 +5,9 @@ import org.apache.logging.log4j.Logger;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
-import ru.job4j.hibernate.model.Driver;
-import ru.job4j.hibernate.model.Engine;
+import ru.job4j.hibernate.model.car.Driver;
+import ru.job4j.hibernate.model.car.Engine;
+import ru.job4j.hibernate.model.car.Car;
 import ru.job4j.hibernate.store.dao.Store;
 import ru.job4j.hibernate.util.HibernateUtil;
 
@@ -65,7 +66,7 @@ public class CarStore<T> implements Store<T> {
     @Override
     public void deleteCar(int id) {
         this.tx(session -> {
-            ru.job4j.hibernate.model.Car car = ru.job4j.hibernate.model.Car.of("", new Engine());
+            Car car = Car.of("", new Engine());
             car.setId(id);
             session.delete(car);
             return null;

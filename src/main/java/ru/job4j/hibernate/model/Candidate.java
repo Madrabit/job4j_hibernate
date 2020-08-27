@@ -18,15 +18,20 @@ public class Candidate {
 
     private String name;
 
-    private int expirience;
+    private int experience;
 
     private int salary;
 
-    public static Candidate of (String name, int expirience, int salary) {
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "account_id", referencedColumnName = "id")
+    private Account account;
+
+    public static Candidate of (String name, int expirience, int salary, Account account) {
         Candidate candidate = new Candidate();
         candidate.name = name;
-        candidate.expirience = expirience;
+        candidate.experience = expirience;
         candidate.salary = salary;
+        candidate.account = account;
         return candidate;
     }
 
@@ -46,12 +51,12 @@ public class Candidate {
         this.name = name;
     }
 
-    public int getExpirience() {
-        return expirience;
+    public int getExperience() {
+        return experience;
     }
 
-    public void setExpirience(int expirience) {
-        this.expirience = expirience;
+    public void setExperience(int expirience) {
+        this.experience = expirience;
     }
 
     public int getSalary() {
@@ -62,20 +67,29 @@ public class Candidate {
         this.salary = salary;
     }
 
+    public Account getAccount() {
+        return account;
+    }
+
+    public void setAccount(Account account) {
+        this.account = account;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Candidate candidate = (Candidate) o;
         return id == candidate.id &&
-                expirience == candidate.expirience &&
+                experience == candidate.experience &&
                 salary == candidate.salary &&
-                Objects.equals(name, candidate.name);
+                Objects.equals(name, candidate.name) &&
+                Objects.equals(account, candidate.account);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, expirience, salary);
+        return Objects.hash(id, name, experience, salary, account);
     }
 
     @Override
@@ -83,8 +97,9 @@ public class Candidate {
         return "Candidate{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
-                ", expirience=" + expirience +
+                ", expirience=" + experience +
                 ", salary=" + salary +
+                ", account=" + account +
                 '}';
     }
 }

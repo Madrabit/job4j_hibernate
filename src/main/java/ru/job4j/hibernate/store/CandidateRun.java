@@ -2,12 +2,11 @@ package ru.job4j.hibernate.store;
 
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import ru.job4j.hibernate.model.Account;
 import ru.job4j.hibernate.model.Candidate;
-import ru.job4j.hibernate.store.dao.CandidateDAO;
+import ru.job4j.hibernate.model.Vacancy;
+import ru.job4j.hibernate.store.dao.JobDao;
 import ru.job4j.hibernate.store.dao.impl.CandidateDaoImpl;
-import ru.job4j.hibernate.store.dao.impl.CarStore;
-
-import java.util.List;
 
 /**
  * @author madrabit on 24.08.2020
@@ -19,20 +18,24 @@ public class CandidateRun {
 
     public static void main(String[] args) {
         try {
-            CandidateDAO dao = new CandidateDaoImpl();
-            Candidate max = Candidate.of("Max", 6, 2000);
-            Candidate petr = Candidate.of("Petr", 3, 1000);
-            Candidate alex = Candidate.of("Alex", 9, 3000);
+            JobDao dao = new CandidateDaoImpl();
+            Vacancy vacancy1 = Vacancy.of("Proger", 1000);
+            Vacancy vacancy2 = Vacancy.of("PizzaMaker", 10);
+            Account accMax =  Account.of("Max");
+            Account accPetr =  Account.of("Petr");
+            Account accAlex =  Account.of("Alex");
+            accMax.addVacancy(vacancy1);
+            accPetr.addVacancy(vacancy2);
+            Candidate max = Candidate.of("Max", 6, 2000, accMax);
+            Candidate petr = Candidate.of("Petr", 3, 1000, accPetr);
+            Candidate alex = Candidate.of("Alex", 9, 3000, accAlex);
+            dao.create(accMax);
+            dao.create(accPetr);
+            dao.create(accAlex);
             dao.create(max);
             dao.create(petr);
             dao.create(alex);
-            System.out.println(dao.findById(1).getName());
-            System.out.println(dao.findByName("Alex").getId());
-            dao.delete(2);
-            dao.update("Mad Max", 7, 3000, 1);
-            System.out.println(dao.findById(1).getName());
-            List<Candidate> list = dao.findAll();
-            list.stream().map(Candidate::getName).forEach(System.out::println);
+            System.out.println(dao.findFullById(1));
         } catch (Exception e) {
             LOG.error(e.getMessage(), e);
         }

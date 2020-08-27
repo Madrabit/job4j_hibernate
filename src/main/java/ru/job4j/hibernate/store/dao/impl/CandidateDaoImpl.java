@@ -7,7 +7,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.query.Query;
 import ru.job4j.hibernate.model.Candidate;
-import ru.job4j.hibernate.store.dao.CandidateDAO;
+import ru.job4j.hibernate.store.dao.JobDao;
 import ru.job4j.hibernate.util.HibernateUtil;
 
 import java.util.List;
@@ -18,7 +18,7 @@ import java.util.function.Function;
  * @version 1$
  * @since 0.1
  */
-public class CandidateDaoImpl implements CandidateDAO {
+public class CandidateDaoImpl<T> implements JobDao<T> {
     private static final Logger LOG = LogManager.getLogger(CarStore.class.getName());
 
     private static final SessionFactory sessionFactory = HibernateUtil.getSessionFactory();
@@ -47,7 +47,7 @@ public class CandidateDaoImpl implements CandidateDAO {
     }
 
     @Override
-    public Candidate create(Candidate model) {
+    public T create(T model) {
         return this.tx(session -> {
             session.save(model);
             return model;
@@ -57,7 +57,7 @@ public class CandidateDaoImpl implements CandidateDAO {
     @Override
     public void update(String name, int experience, int salary, int id) {
         this.tx(session -> {
-            session.createQuery("update Candidate c set c.name = :newName, c.expirience = :newExp, c.salary = :newSalary " +
+            session.createQuery("update Candidate c set c.name = :newName, c.experience = :newExp, c.salary = :newSalary " +
                     "where c.id = :fId")
                     .setParameter("newName", name)
                     .setParameter("newExp", experience)
@@ -96,6 +96,7 @@ public class CandidateDaoImpl implements CandidateDAO {
         });
     }
 
+
     @Override
     public Candidate findByName(String name) {
         return (Candidate) this.tx(session -> {
@@ -103,5 +104,14 @@ public class CandidateDaoImpl implements CandidateDAO {
             query.setParameter("fName", name);
             return query.uniqueResult();
         });
+    }
+
+    @Override
+    public Candidate findFullById(int id) {
+        return this.tx(session -> session.createQuery("select distinct cn from Candidate cn "
+                + "join fetch cn.account a "
+                + "join fetch a.vacancyList v "
+                + "where cn.id = :cId", Candidate.class
+        ).setParameter("cId", id).uniqueResult());
     }
 }

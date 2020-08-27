@@ -4,10 +4,12 @@ import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.cfg.Environment;
+import ru.job4j.hibernate.model.Account;
 import ru.job4j.hibernate.model.Candidate;
-import ru.job4j.hibernate.model.Car;
-import ru.job4j.hibernate.model.Driver;
-import ru.job4j.hibernate.model.Engine;
+import ru.job4j.hibernate.model.Vacancy;
+import ru.job4j.hibernate.model.car.Car;
+import ru.job4j.hibernate.model.car.Driver;
+import ru.job4j.hibernate.model.car.Engine;
 
 import java.util.Properties;
 
@@ -37,6 +39,8 @@ public class HibernateUtil {
                 configuration.addAnnotatedClass(Driver.class);
                 configuration.addAnnotatedClass(Engine.class);
                 configuration.addAnnotatedClass(Candidate.class);
+                configuration.addAnnotatedClass(Account.class);
+                configuration.addAnnotatedClass(Vacancy.class);
                 StandardServiceRegistryBuilder builder = new StandardServiceRegistryBuilder()
                         .applySettings(configuration.getProperties());
                 sessionFactory = configuration.buildSessionFactory(builder.build());

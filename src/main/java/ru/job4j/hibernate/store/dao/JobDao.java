@@ -10,8 +10,8 @@ import java.util.List;
  * @since 0.1
  * Выполните запросы выборки всех кандидатов, кандидата по id, кандидата по имени, обновления записи кандидата, удаления записи кандидата по id.
  */
-public interface CandidateDAO {
-    Candidate create(Candidate model);
+public interface JobDao<T> {
+    T create(T model);
 
     void update(String name, int experience, int salary, int id);
 
@@ -22,4 +22,6 @@ public interface CandidateDAO {
     Candidate findById(int id);
 
     Candidate findByName(String name);
+
+    Candidate findFullById(int id);
 }

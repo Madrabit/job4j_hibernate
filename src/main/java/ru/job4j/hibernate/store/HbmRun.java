@@ -1,8 +1,8 @@
 package ru.job4j.hibernate.store;
 
-import ru.job4j.hibernate.model.Car;
-import ru.job4j.hibernate.model.Driver;
-import ru.job4j.hibernate.model.Engine;
+import ru.job4j.hibernate.model.car.Car;
+import ru.job4j.hibernate.model.car.Driver;
+import ru.job4j.hibernate.model.car.Engine;
 import ru.job4j.hibernate.store.dao.impl.CarStore;
 
 import java.util.List;
@@ -14,9 +14,7 @@ import java.util.List;
  * Class for Testing many-to-many in Hibernate.
  */
 public class HbmRun {
-
     public static void main(String[] args) {
-
         try {
             CarStore carsStore = new CarStore();
             Engine engine = Engine.of("V8");
@@ -39,5 +37,4 @@ public class HbmRun {
             e.printStackTrace();
         }
     }
-
 }
